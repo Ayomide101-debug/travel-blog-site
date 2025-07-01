@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Blog Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .number-block {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            line-height: 100px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .block-1 {
+            background-color: #ff6b6b;
+        }
+
+        .block-2 {
+            background-color: #1dd1a1;
+        }
+
+        .block-3 {
+            background-color: #54a0ff;
+        }
+
+        .block-4 {
+            background-color: #feca57;
+        }
+
+        .number-block:hover {
+            opacity: 0.8;
+        }
+
+        .destination-list {
+            display: none;
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            margin-top: 50px;
+            padding: 20px;
+            background: #f7f7f7;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to My Travel Blog</h1>
+    <div class="number-block block-1" onclick="toggleList('list1')">1</div>
+    <div class="number-block block-2" onclick="toggleList('list2')">2</div>
+    <div class="number-block block-3" onclick="toggleList('list3')">3</div>
+    <div class="number-block block-4" onclick="toggleList('list4')">4</div>
+
+    <div id="list1" class="destination-list">
+        <h2>Europe</h2>
+        <ol>
+            <li>France<ul>
+                    <li><a href="#paris">Paris</a></li>
+                </ul>
+            </li>
+            <li>Italy<ul>
+                    <li><a href="#rome">Rome</a></li>
+                </ul>
+            </li>
+            <li>Greece<ul>
+                    <li><a href="#athens">Athens</a></li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    <div id="list2" class="destination-list">
+        <h2>Asia</h2>
+        <ol>
+            <li>Japan<ul>
+                    <li><a href="#tokyo">Tokyo</a></li>
+                </ul>
+            </li>
+            <li>China<ul>
+                    <li><a href="#beijing">Beijing</a></li>
+                </ul>
+            </li>
+            <li>India<ul>
+                    <li><a href="#delhi">New Delhi</a></li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    <div id="list3" class="destination-list">
+        <h2>America</h2>
+        <ol>
+            <li>USA<ul>
+                    <li><a href="#newyork">New York City</a></li>
+                </ul>
+            </li>
+            <li>Brazil<ul>
+                    <li><a href="#rio">Rio de Janeiro</a></li>
+                </ul>
+            </li>
+            <li>Canada<ul>
+                    <li><a href="#toronto">Toronto</a></li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    <div id="list4" class="destination-list">
+        <h2>Africa</h2>
+        <ol>
+            <li>South Africa<ul>
+                    <li><a href="#capetown">Cape Town</a></li>
+                </ul>
+            </li>
+            <li>Egypt<ul>
+                    <li><a href="#cairo">Cairo</a></li>
+                </ul>
+            </li>
+            <li>Morocco<ul>
+                    <li><a href="#marrakech">Marrakech</a></li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <!-- Destination Info Sections -->
+    <div id="paris" class="section">
+        <h2>Paris</h2>
+        <p>Paris is known for the Eiffel Tower and its romantic charm.</p>
+    </div>
+    <div id="rome" class="section">
+        <h2>Rome</h2>
+        <p>Rome is famous for its ancient architecture like the Colosseum.</p>
+    </div>
+    <div id="athens" class="section">
+        <h2>Athens</h2>
+        <p>Athens is the historical capital of Europe and home to the Acropolis.</p>
+    </div>
+
+    <div id="tokyo" class="section">
+        <h2>Tokyo</h2>
+        <p>Tokyo is Japan's capital, blending ultra-modern and traditional culture.</p>
+    </div>
+    <div id="beijing" class="section">
+        <h2>Beijing</h2>
+        <p>Beijing is China's historic capital, home to the Forbidden City.</p>
+    </div>
+    <div id="delhi" class="section">
+        <h2>New Delhi</h2>
+        <p>New Delhi is India's capital with rich heritage and bustling bazaars.</p>
+    </div>
+
+    <div id="newyork" class="section">
+        <h2>New York City</h2>
+        <p>The Big Apple, famous for its skyline and diversity.</p>
+    </div>
+    <div id="rio" class="section">
+        <h2>Rio de Janeiro</h2>
+        <p>Known for Christ the Redeemer and carnival vibes.</p>
+    </div>
+    <div id="toronto" class="section">
+        <h2>Toronto</h2>
+        <p>Canada’s largest city with a rich cultural mix and CN Tower.</p>
+    </div>
+
+    <div id="capetown" class="section">
+        <h2>Cape Town</h2>
+        <p>Famous for Table Mountain and beautiful coastlines.</p>
+    </div>
+    <div id="cairo" class="section">
+        <h2>Cairo</h2>
+        <p>Home to the Great Pyramids and ancient Egyptian treasures.</p>
+    </div>
+    <div id="marrakech" class="section">
+        <h2>Marrakech</h2>
+        <p>A Moroccan gem with souks, palaces, and desert charm.</p>
+    </div>
+
+    <script>
+        function toggleList(id) {
+            document.querySelectorAll('.destination-list').forEach(el => el.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
